@@ -53,3 +53,59 @@ function toggleStylesheet() {
     // toggle "css/layout.css" and "css/view.css"
     stylesheet.setAttribute("href", currentHref === "css/layout.css" ? "css/view.css" : "css/layout.css");
 }
+
+// STRUSZUFKA
+setTimeout(() => {
+    // ignore
+    const ignoredSelectors = ["#popup", ".donate", ".watermark"];
+
+    // extract
+    function getTrackedElements() {
+        let elements = document.querySelectorAll("body *");
+        let tracked = new Set();
+        
+        elements.forEach(el => {
+            if (ignoredSelectors.some(selector => el.matches(selector))) return;
+            if (el.id) tracked.add(`#${el.id}`);
+            el.classList.forEach(cls => tracked.add(`.${cls}`));
+        });
+
+        return tracked;
+    }
+
+    // save
+    let initialElements = getTrackedElements();
+
+    const observer = new MutationObserver((mutations) => {
+        for (let mutation of mutations) {
+            if (mutation.removedNodes.length > 0) {
+                mutation.removedNodes.forEach(node => {
+                    if (!(node instanceof HTMLElement)) return;
+
+                    let nodeId = node.id ? `#${node.id}` : null;
+                    let nodeClasses = [...node.classList].map(cls => `.${cls}`);
+
+                    if (nodeId && initialElements.has(nodeId)) {
+                        console.log(`Element ${nodeId} removed! Reloading...`);
+                        location.reload();
+                    }
+                    
+                    nodeClasses.forEach(cls => {
+                        if (initialElements.has(cls)) {
+                            console.log(`Element with class ${cls} removed! Reloading...`);
+                            location.reload();
+                        }
+                    });
+                });
+            }
+        }
+    });
+
+    observer.observe(document.body, { 
+        childList: true,  
+        subtree: true     
+    });
+
+}, 1000);
+
+document.addEventListener("contextmenu", (event) => event.preventDefault());
