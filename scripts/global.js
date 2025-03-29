@@ -109,3 +109,9 @@ setTimeout(() => {
 }, 1000);
 
 document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-EHXK93QN2W');
