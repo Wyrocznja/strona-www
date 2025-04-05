@@ -278,15 +278,11 @@ background-color: #0000004e;
 
 .banner {
     scale: 0.5;
-    z-index: 9;
+    z-index: 4;
     position: absolute;
-    bottom: -40%;
-    left: 43%;
     transform: translateX(-50%);
-    font-family: 'Arial', sans-serif;
-    font-size: 15px;
-    background: #00000000;
-    color: white;
+    bottom: -32%;
+    left: 0%;
     padding: 10px 10px;
     margin-bottom: 10px;
     border-radius: 8px;
