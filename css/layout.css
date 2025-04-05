@@ -277,7 +277,7 @@ background-color: #0000004e;
 }
 
 .banner {
-    scale: 0.66;
+    scale: 0.5;
     z-index: 9;
     position: absolute;
     bottom: -40%;
