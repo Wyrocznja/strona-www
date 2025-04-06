@@ -116,21 +116,23 @@ body {
     border-radius: 0px;
 }
 
-.chat-container {
-    z-index: 5;
-    width: 28%;
-    background-color: #121212;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
 .chat-container iframe {
+    position: fixed;
     z-index: 6;
-    width: 97%;
+    width: 20%;
     height: 100%;
     border-radius: 0px;
+}
+
+.chat-container {
+    z-index: 5;
+    width: 8%;
+    height: auto;
+    background-color: #121212;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    border-radius: 10px;
 }
 
 .donate {
