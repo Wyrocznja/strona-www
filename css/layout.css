@@ -146,7 +146,7 @@ body {
     background-color: #000000d3;
     border-radius: 50%;
     font-size: 25px;
-    color: #0fb917;
+    color: #3cd217;
     font-family: 'Russo One', sans-serif;
     position: absolute;
     bottom: -1%;
@@ -175,8 +175,8 @@ body {
 
 .donate:hover {
     scale: 1.5;
-    color: #02cc0d;
-    text-shadow: #0fb917 0px 0px 10px;
+    color: #3cd217;
+    text-shadow: #3cd217 0px 0px 10px;
     background-color: #000000;
     animation: spinSlowly 0.8s linear infinite; /* spin time */
 }
@@ -185,7 +185,7 @@ body {
     text-decoration: none;
     border-radius: 50%;
     font-size: 23px;
-    color: #ffffff;
+    color: #ffffff00;
     font-family: 'Russo One', sans-serif;
     position: absolute;
     bottom: 8%;
@@ -228,7 +228,7 @@ background-color: #000000af;
 }
 
 .link-container a.donate2 {
-    color: #0fb917;
+    color: #3cd217;
 }
 
 .link-container a.donate2:hover {
