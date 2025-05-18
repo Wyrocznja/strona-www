@@ -111,7 +111,7 @@ body {
     text-decoration: none;
     border-radius: 50%;
     font-size: 25px;
-    color: #ffffff;
+    color: #ffffff00;
     font-family: 'Russo One', sans-serif;
     position: fixed;
     bottom: 10%;
@@ -127,7 +127,7 @@ body {
 
 
 .watermark:hover {
-    color: #09ff007a;
+    color: #09ff00a5;
     scale: 1.1;
 }
 
