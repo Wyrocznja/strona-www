@@ -22,7 +22,7 @@
     h2 {
         text-align: center;
         font-family: 'Russo One', sans-serif;
-        color: rgb(60, 210, 23);
+        color: #3cd217;
         text-transform: uppercase;
         margin-bottom: 20px;
     }
@@ -33,4 +33,16 @@
         text-align: center;
         color: rgb(60, 210, 23);
         text-transform: uppercase;
+    }
+
+    .back-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 10px 20px;
+        background-color: #3cd217;
+        border-radius: 5px;
+        font-family: 'Russo One', sans-serif;           
+        text-decoration: none;
+        color: #252525;
     }
